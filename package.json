@@ -1,0 +1,23 @@
+{
+  "name": "shuttrstockr",
+  "version": "0.1.0",
+  "description": "download images from Shutterstock",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "bin": {
+    "shuttrstockr": "shuttrstockr.js"
+  },
+  "author": "Tobias Fuhrimann <tobias.fuhrimann@gmail.com> (http://www.berndsgn.ch)",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "request": "^2.64.0",
+    "shutterstock": "^0.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.5.1",
+    "eslint-config-mastertinner-nodejs": "^0.2.2",
+    "eslint-plugin-mocha": "^1.0.0"
+  }
+}

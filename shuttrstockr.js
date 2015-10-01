@@ -69,15 +69,18 @@ program
     for (let j = 0; j < numPages; j++) {
       query.page = j + 1;
 
+      let i = 0;
+
       api.image.search(query, (err1, data1) => {
         if (err1) throw err1;
-
-        let i = 0;
           
+        /**
+         * get a single image and download it
+         * @returns {void}
+         */
         function getImageDetails() {
           keywords = '';
           setTimeout(() => {
-            console.log('requesting');
 
             api.image.get(data1.data[i].id, (err2, data) => {
               if (err2) throw err2;
@@ -92,7 +95,7 @@ program
               } else {
                 keywords = '';
               }
-              resultString = `shutterstock-${i + 1 + 50 * j}-${data.id}|${keywords}|${data.id}${os.EOL}`;
+              resultString = `${i + 50 * j}|shutterstock-${i + 50 * j}-${data.id}|${keywords}|${data.id}${os.EOL}`;
               fs.appendFile('data.txt', resultString, (err2) => {
                 if (err2) throw err2;
               });

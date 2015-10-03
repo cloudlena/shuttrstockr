@@ -32,7 +32,8 @@ program
   .option('-i, --id <Client ID>', 'Your Shutterstock API Client ID')
   .option('-s, --secret <Client Secret>', 'Your Shutterstock API Client Secret')
   .option('-p, --path [path]', 'The location to save the images to')
-  .option('-n, --number [number]', 'The number of images to download')
+  .option('-n, --number <number>', 'The number of images to download')
+  .option('-a, --abbreviation <abbreviation>', 'The prefix to add to the image name')
   .description('Search the Shutterstock API')
   .action((searchTerm, options) => {
     const query = {};
@@ -95,7 +96,7 @@ program
               } else {
                 keywords = '';
               }
-              resultString = `${i + 50 * j}|shutterstock-${i + 50 * j}-${data.id}|${keywords}|${data.id}${os.EOL}`;
+              resultString = `${i + 50 * j}|shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}|${keywords}|${data.id}${os.EOL}`;
               fs.appendFile('data.txt', resultString, (err2) => {
                 if (err2) throw err2;
               });

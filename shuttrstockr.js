@@ -101,8 +101,8 @@ program
                 if (err2) throw err2;
               });
 
-              download(data.assets.preview.url, `${options.path}${data.id}.jpg`, () => {
-                console.log(`downloaded ${data.id}.jpg`);
+              download(data.assets.preview.url, `${options.path}shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}.jpg`, () => {
+                console.log(`downloaded shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}.jpg`);
               });
             });
 

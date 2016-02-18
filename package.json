@@ -8,16 +8,16 @@
   "bin": {
     "shuttrstockr": "shuttrstockr.js"
   },
-  "author": "Tobias Fuhrimann <tobias.fuhrimann@gmail.com> (http://www.berndsgn.ch)",
+  "author": "Tobias Fuhrimann <tobias.fuhrimann@gmail.com> (https://berndsgn.ch)",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.8.1",
-    "request": "^2.64.0",
+    "commander": "^2.9.0",
+    "request": "^2.69.0",
     "shutterstock": "^0.12.0"
   },
   "devDependencies": {
-    "eslint": "^1.5.1",
-    "eslint-config-mastertinner-nodejs": "^0.2.2",
-    "eslint-plugin-mocha": "^1.0.0"
+    "eslint": "^2.1.0",
+    "eslint-config-mastertinner-nodejs": "^2.0.2",
+    "eslint-plugin-mocha": "^2.0.0"
   }
 }

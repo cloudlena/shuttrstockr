@@ -10,6 +10,10 @@
   },
   "author": "Tobias Fuhrimann <tobias.fuhrimann@gmail.com> (https://berndsgn.ch)",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mastertinner/shuttrstockr.git"
+  },
   "dependencies": {
     "commander": "^2.9.0",
     "request": "^2.69.0",

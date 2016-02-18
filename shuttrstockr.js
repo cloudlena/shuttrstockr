@@ -72,9 +72,9 @@ program
 
       let i = 0;
 
-      api.image.search(query, (err1, data1) => {
+      api.image.search(query, (err1, data1) => { // eslint-disable-line
         if (err1) throw err1;
-          
+
         /**
          * get a single image and download it
          * @returns {void}
@@ -97,8 +97,8 @@ program
                 keywords = '';
               }
               resultString = `${i + 50 * j}|shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}|${keywords}|${data.id}${os.EOL}`;
-              fs.appendFile('data.txt', resultString, (err2) => {
-                if (err2) throw err2;
+              fs.appendFile('data.txt', resultString, (err3) => {
+                if (err3) throw err3;
               });
 
               download(data.assets.preview.url, `${options.path}shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}.jpg`, () => {

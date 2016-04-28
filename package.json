@@ -1,7 +1,7 @@
 {
   "name": "shuttrstockr",
   "version": "0.1.0",
-  "description": "download images from Shutterstock",
+  "description": "Download images from Shutterstock",
   "scripts": {
     "test": "eslint ."
   },

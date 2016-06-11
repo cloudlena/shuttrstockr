@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable max-len */
+
 'use strict';
 
 const appInfo = require('./package');
@@ -33,7 +35,10 @@ program
   .option('-s, --secret <Client Secret>', 'Your Shutterstock API Client Secret')
   .option('-p, --path [path]', 'The location to save the images to')
   .option('-n, --number <number>', 'The number of images to download')
-  .option('-a, --abbreviation <abbreviation>', 'The prefix to add to the image name')
+  .option(
+    '-a, --abbreviation <abbreviation>',
+    'The prefix to add to the image name'
+  )
   .description('Search the Shutterstock API')
   .action((searchTerm, options) => {
     const query = {};
@@ -80,6 +85,9 @@ program
          * @returns {void}
          */
         function getImageDetails() {
+          const fromPrevPages = 50 * j;
+          const imgIndex = i + fromPrevPages;
+
           keywords = '';
           setTimeout(() => {
 
@@ -96,14 +104,18 @@ program
               } else {
                 keywords = '';
               }
-              resultString = `${i + 50 * j}|shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}|${keywords}|${data.id}${os.EOL}`;
+              resultString = `${imgIndex}|shutterstock-${options.abbreviation}-${imgIndex}-${data.id}|${keywords}|${data.id}${os.EOL}`;
               fs.appendFile('data.txt', resultString, (err3) => {
                 if (err3) throw err3;
               });
 
-              download(data.assets.preview.url, `${options.path}shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}.jpg`, () => {
-                console.log(`downloaded shutterstock-${options.abbreviation}-${i + 50 * j}-${data.id}.jpg`);
-              });
+              download(
+                data.assets.preview.url,
+                `${options.path}shutterstock-${options.abbreviation}-${imgIndex}-${data.id}.jpg`,
+                () => {
+                  console.log(`downloaded shutterstock-${options.abbreviation}-${imgIndex}-${data.id}.jpg`);
+                }
+              );
             });
 
             i++;

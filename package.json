@@ -21,7 +21,7 @@
     "shutterstock": "^0.12.0"
   },
   "devDependencies": {
-    "eslint": "^3.5.0",
+    "eslint": "^3.6.0",
     "eslint-config-mastertinner-nodejs": "^7.0.1",
     "eslint-plugin-mocha": "^4.5.1"
   }

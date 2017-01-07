@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "eslint": "^3.13.0",
-    "eslint-config-mastertinner-nodejs": "^12.1.0",
+    "eslint-config-mastertinner-nodejs": "^12.2.0",
     "eslint-plugin-mocha": "^4.8.0"
   }
 }

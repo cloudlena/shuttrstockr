@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Download images from Shutterstock",
   "scripts": {
-    "test": "eslint .",
+    "pretest": "npm run lint",
+    "test": "echo 'No tests specified'",
+    "lint": "eslint . --fix",
     "start": "node shuttrstockr search -h"
   },
   "bin": {

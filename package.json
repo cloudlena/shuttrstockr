@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
-    "request": "^2.79.0",
+    "request": "^2.80.0",
     "shutterstock": "^0.13.0"
   },
   "devDependencies": {

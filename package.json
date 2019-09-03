@@ -18,13 +18,13 @@
     "url": "git@github.com:mastertinner/shuttrstockr.git"
   },
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^3.0.2",
     "request": "^2.81.0",
     "shutterstock": "^0.13.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^6.5.1",
     "eslint-config-mastertinner-nodejs": "^12.6.0",
-    "eslint-plugin-mocha": "^4.9.0"
+    "eslint-plugin-mocha": "^6.2.0"
   }
 }

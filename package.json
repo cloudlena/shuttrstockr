@@ -11,7 +11,7 @@
   "bin": {
     "shuttrstockr": "shuttrstockr.js"
   },
-  "author": "Tobias Fuhrimann <tobias.fuhrimann@gmail.com> (https://berndsgn.ch)",
+  "author": "Tobias Fuhrimann",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -23,8 +23,22 @@
     "shutterstock": "^0.13.0"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-config-mastertinner-nodejs": "^12.6.0",
-    "eslint-plugin-mocha": "^6.2.0"
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

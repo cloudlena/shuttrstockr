@@ -18,22 +18,21 @@
     "url": "git@github.com:mastertinner/shuttrstockr.git"
   },
   "dependencies": {
-    "commander": "^3.0.2",
+    "commander": "^4.1.1",
     "request": "^2.81.0",
     "shutterstock": "^0.13.0"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.0.9",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1"
   },
   "lint-staged": {
     "src/**/*.ts": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "husky": {

@@ -15,12 +15,10 @@ const request = require("request");
  * @returns {void}
  */
 function download(uri, filename, callback) {
-  request.head(uri, err => {
+  request.head(uri, (err) => {
     if (err) throw err;
 
-    request(uri)
-      .pipe(fs.createWriteStream(filename))
-      .on("close", callback);
+    request(uri).pipe(fs.createWriteStream(filename)).on("close", callback);
   });
 }
 
@@ -42,7 +40,7 @@ program
     const query = {};
     const api = shutterstock.v2({
       clientId: options.id,
-      clientSecret: options.secret
+      clientSecret: options.secret,
     });
     let numPages = 1;
     let keywords = "";
@@ -100,7 +98,7 @@ program
                 keywords = "";
               }
               resultString = `${imgIndex}|shutterstock-${options.abbreviation}-${imgIndex}-${data.id}|${keywords}|${data.id}${os.EOL}`;
-              fs.appendFile("data.txt", resultString, err3 => {
+              fs.appendFile("data.txt", resultString, (err3) => {
                 if (err3) throw err3;
               });
 
